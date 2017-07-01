@@ -1,3 +1,25 @@
+project(breeze)
+set(PROJECT_VERSION "5.10.90")
+set(PROJECT_VERSION_MAJOR 5)
+
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+
+include(WriteBasicConfigVersionFile)
+include(FeatureSummary)
+
+find_package(ECM 0.0.9 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_SOURCE_DIR}/cmake)
+
+include(ECMInstallIcons)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(GenerateExportHeader)
+# include(GtkUpdateIconCache)
+
+find_package(KDecoration2 REQUIRED)
+
+
 add_definitions(-DTRANSLATION_DOMAIN="breeze_kwin_deco")
 
 find_package(KF5 REQUIRED COMPONENTS CoreAddons GuiAddons ConfigWidgets WindowSystem I18n)
