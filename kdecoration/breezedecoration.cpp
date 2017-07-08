@@ -303,8 +303,8 @@ namespace Breeze
         createShadow();
 
         // size grip
-        if( hasNoBorders() && m_internalSettings->drawSizeGrip() ) createSizeGrip();
-        else deleteSizeGrip();
+        // if( hasNoBorders() && m_internalSettings->drawSizeGrip() ) createSizeGrip();
+        // else deleteSizeGrip();
 
     }
 
