@@ -517,7 +517,7 @@ namespace Breeze
         int size( shadowSize - Metrics::Shadow_Overlap );
         int topSize = ( size - shadowOffset ) * devicePixelRatio;
         int bottomSize = size * devicePixelRatio;
-        const int leftSize( (size - shadowOffset) * devicePixelRatio );
+        const int leftSize( size * devicePixelRatio );
         const int rightSize( size * devicePixelRatio );
 
         if( widget->inherits( "QBalloonTip" ) )
